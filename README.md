@@ -20,12 +20,15 @@ Build this image using something like:
 ```
 docker build -t deep_photo .
 ```
-To run the container you'll need recent nvidia drivers installed and nvidia-docker (from here: https://github.com/NVIDIA/nvidia-docker). Then run something like:
+To run the container you'll need recent nvidia drivers installed and nvidia-docker (from here: https://github.com/NVIDIA/nvidia-docker). This (DL-Docker repository)[https://github.com/floydhub/dl-docker) from (FloydHub)[https://www.floydhub.com/] is a great resource for setting up a nvidia-accelerated cloud instance
+
+Once setup, run the Docker image as a Container:
 ```
 sudo nvidia-docker run -it -p 8888:8888 -p 6006:6006 -v /sharedfolder:/root/sharedfolder --name deep_photo deep_photo
 ```
+
 ## Usage
-Example run command:
+Example run command once in the docker container:
 ```
 python3 gen_all.py -in_dir examples/input \
 	-style_dir examples/style \
