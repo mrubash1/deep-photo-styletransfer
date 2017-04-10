@@ -44,7 +44,7 @@ python3 gen_all.py -in_dir examples/input \
 Example command to move original examples and remake examples directory structure
 ```
 mv examples old_examples
-mkdir examples/in_seg examples/input examples/lap examples/results examples/style examples/style_seg examples/tmp_results
+mkdir examples examples/in_seg examples/input examples/lap examples/results examples/style examples/style_seg examples/tmp_results
 ```
 
 ## Using jupyter
