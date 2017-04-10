@@ -1,6 +1,11 @@
 # deep-photo-styletransfer
 Based on "[Deep Photo Style Transfer](https://arxiv.org/abs/1703.07511)".
 Amended from [here](https://github.com/luanfujun/deep-photo-styletransfer).
+Utilizing improvements from [here](https://github.com/martinbenson/deep-photo-styletransfer)
+
+### Example using this code base and default settings
+![example-style-transfer-montage](images/Montage_WindowsXP_Space.jpg)
+
 PLEASE NOTE RESTRICTIONS ON USAGE OF ORIGINAL CODE.
 ### Features
 * Dockerised for ease of installing.
