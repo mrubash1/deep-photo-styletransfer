@@ -50,9 +50,9 @@ mkdir examples/in_seg examples/input examples/lap examples/results examples/styl
 ## Using jupyter
 When in the docker container 
 ```
-./run_jupyter
+./run_jupyter --port=8888 --no-browser &
 ```
-On your local computer, navigate to localhost:8000 in your web browser.
+On your local computer, navigate to the ip address with token that is returned when you ran the above command. (i.e. localhost:8000....)
 
 If you are using google cloud, here is a command to port forward from your gcloud instance to local:
 ```
