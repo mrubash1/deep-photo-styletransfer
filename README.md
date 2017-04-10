@@ -1,7 +1,7 @@
 # deep-photo-styletransfer
 Based on "[Deep Photo Style Transfer](https://arxiv.org/abs/1703.07511)".
-Amended from [here](https://github.com/luanfujun/deep-photo-styletransfer).
-Utilizing improvements from [here](https://github.com/martinbenson/deep-photo-styletransfer)
+Amended from [Luanfujun here](https://github.com/luanfujun/deep-photo-styletransfer).
+Utilizing improvements from [Martin Benson here](https://github.com/martinbenson/deep-photo-styletransfer)
 
 ### Example using this code base and default settings
 ![example-style-transfer-montage](images/Montage_WindowsXP_Space.jpg)
