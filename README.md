@@ -22,16 +22,45 @@ docker build -t deep_photo .
 ```
 To run the container you'll need recent nvidia drivers installed and nvidia-docker (from here: https://github.com/NVIDIA/nvidia-docker). Then run something like:
 ```
-nvidia-docker run -it --name deep_photo deep_photo
+sudo nvidia-docker run -it -p 8888:8888 -p 6006:6006 -v /sharedfolder:/root/sharedfolder --name deep_photo deep_photo
 ```
 ## Usage
+Example run command:
+```
+python3 gen_all.py -in_dir examples/input \
+	-style_dir examples/style \
+	-in_seg_dir examples/in_seg \
+	-style_seg_dir examples/style_seg \
+	-tmp_results_dir examples/tmp_results \
+	-results_dir examples/results \
+	-lap_dir examples/lap \
+	-lambda 1000 \
+	-width 700
+```
 
-Run:
+Example command to move original examples and remake examples directory structure
+```
+mv examples old_examples
+mkdir examples/in_seg examples/input examples/lap examples/results examples/style examples/style_seg examples/tmp_results
+```
 
-```python3 gen_all.py <options>```
+## Using jupyter
+When in the docker container 
+```
+./run_jupyter
+```
+On your local computer, navigate to localhost:8000 in your web browser.
+
+If you are using google cloud, here is a command to port forward from your gcloud instance to local:
+```
+gcloud compute ssh "test-instance-1" \
+  --project "tranquil-well-159618" \
+  --zone "us-east1-d" \
+  --ssh-flag="-L" \
+  --ssh-flag="8888:localhost:8888"
+```
 
 ### Arguments
-
 ```
 usage: gen_all.py [-h] [-in_dir IN_DIRECTORY] [-style_dir STYLE_DIRECTORY]
                   [-in_seg_dir IN_SEG_DIRECTORY]
@@ -71,5 +100,3 @@ optional arguments:
                         Iterations in stage 2
 
 ```
-
-TODO: Document this properly.
